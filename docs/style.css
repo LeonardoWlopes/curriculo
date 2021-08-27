@@ -6,6 +6,8 @@ header{
 }
 section{
     margin: 50px;
+    background-color: rgba(128, 128, 128, 0.300);
+    border-radius: 10px;
 }
 a{
     color: black;
