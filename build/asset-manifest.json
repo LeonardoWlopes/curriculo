@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/curriculo/static/css/main.08a850f7.chunk.css",
-    "main.js": "/curriculo/static/js/main.c7db627b.chunk.js",
-    "main.js.map": "/curriculo/static/js/main.c7db627b.chunk.js.map",
+    "main.css": "/curriculo/static/css/main.2c60c019.chunk.css",
+    "main.js": "/curriculo/static/js/main.14ace3da.chunk.js",
+    "main.js.map": "/curriculo/static/js/main.14ace3da.chunk.js.map",
     "runtime-main.js": "/curriculo/static/js/runtime-main.26644dd4.js",
     "runtime-main.js.map": "/curriculo/static/js/runtime-main.26644dd4.js.map",
     "static/js/2.22223fab.chunk.js": "/curriculo/static/js/2.22223fab.chunk.js",
     "static/js/2.22223fab.chunk.js.map": "/curriculo/static/js/2.22223fab.chunk.js.map",
     "index.html": "/curriculo/index.html",
-    "static/css/main.08a850f7.chunk.css.map": "/curriculo/static/css/main.08a850f7.chunk.css.map",
+    "static/css/main.2c60c019.chunk.css.map": "/curriculo/static/css/main.2c60c019.chunk.css.map",
     "static/js/2.22223fab.chunk.js.LICENSE.txt": "/curriculo/static/js/2.22223fab.chunk.js.LICENSE.txt",
     "static/media/folder.131f06eb.svg": "/curriculo/static/media/folder.131f06eb.svg",
     "static/media/git-branch.120adf52.svg": "/curriculo/static/media/git-branch.120adf52.svg",
@@ -17,12 +17,13 @@
     "static/media/linkedin.9e52cf32.svg": "/curriculo/static/media/linkedin.9e52cf32.svg",
     "static/media/mail.eee1baa7.svg": "/curriculo/static/media/mail.eee1baa7.svg",
     "static/media/map-pin.8c41fcd3.svg": "/curriculo/static/media/map-pin.8c41fcd3.svg",
+    "static/media/rocket.e146145c.png": "/curriculo/static/media/rocket.e146145c.png",
     "static/media/star.8070f233.svg": "/curriculo/static/media/star.8070f233.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.26644dd4.js",
     "static/js/2.22223fab.chunk.js",
-    "static/css/main.08a850f7.chunk.css",
-    "static/js/main.c7db627b.chunk.js"
+    "static/css/main.2c60c019.chunk.css",
+    "static/js/main.14ace3da.chunk.js"
   ]
 }

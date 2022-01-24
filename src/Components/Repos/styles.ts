@@ -147,3 +147,13 @@ export const LanguageColor = styled.div<props>`
   border: 2px solid #837e9f;
   margin-right: 8px;
 `;
+
+export const Rocket = styled.img`
+  width: 25px;
+  margin-left: auto;
+  display: block;
+  transition: 0.2s;
+  &&:hover {
+    width: 30px;
+  }
+`;

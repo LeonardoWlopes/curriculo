@@ -4,7 +4,7 @@ export default function GitHubStats() {
   return (
     <S.Container>
       <S.TitleContainer>
-        <S.Title>coming soon</S.Title>
+        <S.Title>Em breve</S.Title>
       </S.TitleContainer>
       <S.StatsContainer></S.StatsContainer>
     </S.Container>

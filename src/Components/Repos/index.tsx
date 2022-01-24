@@ -5,6 +5,7 @@ import * as S from "./styles";
 import Folder from "../../Assets/folder.svg";
 import Star from "../../Assets/star.svg";
 import Branch from "../../Assets/git-branch.svg";
+import Rocket from "../../Assets/rocket.png";
 
 interface ICard {
   id: number;
@@ -14,6 +15,8 @@ interface ICard {
   forks: string;
   language: string;
   html_url: string;
+  updated_at: string;
+  homepage: string;
 }
 
 export default function Repos() {
@@ -49,17 +52,27 @@ export default function Repos() {
     forks,
     language,
     html_url,
+    homepage,
   }: ICard) {
     return (
       <S.CardContainer
         onClick={() => {
           window.open(html_url, "_blank");
         }}
-        className="RepoCard"
+        className="RepoCard notranslate"
       >
         <S.Head>
           <S.Icon src={Folder} />
-          <S.RepoTitle>{name}</S.RepoTitle>
+          <S.RepoTitle >{name}</S.RepoTitle>
+          {!!homepage && (
+            <S.Rocket
+              src={Rocket}
+              alt="Icone foguete"
+              onClick={() => {
+                window.open(homepage, "_blank");
+              }}
+            />
+          )}
         </S.Head>
         <S.Body>
           <S.BodyText>{description}</S.BodyText>
@@ -87,6 +100,10 @@ export default function Repos() {
     );
   }
 
+  const OrderedRepos = repos?.sort(function (a, b) {
+    return b.updated_at.localeCompare(a.updated_at);
+  });
+
   return (
     <S.Container>
       <S.TitleContainer onClick={() => setOpen(!open)} className="RepoCard">
@@ -99,7 +116,7 @@ export default function Repos() {
         </S.Link>
       </S.TitleContainer>
       <S.ReposContainer open={open}>
-        {repos?.map((repo) => (
+        {OrderedRepos?.map((repo) => (
           <RepoCard
             key={repo.id}
             id={repo.id}
@@ -109,6 +126,8 @@ export default function Repos() {
             forks={repo.forks}
             language={repo.language}
             html_url={repo.html_url}
+            updated_at={repo.updated_at}
+            homepage={repo.homepage}
           />
         ))}
       </S.ReposContainer>
