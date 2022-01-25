@@ -25,14 +25,14 @@ export default function Repos() {
   const [colors, setColors] = useState<any>();
   const [open, setOpen] = useState(false);
 
+  const { user } = useContext(UserContext);
+
   useEffect(() => {
-    axios
-      .get("https://api.github.com/users/LeonardoWlopes/repos")
-      .then((res) => {
-        console.log(res.data);
-        setRepos(res.data);
-      });
-  }, []);
+    axios.get(`${user?.repos_url}`).then((res) => {
+      console.log(res.data);
+      setRepos(res.data);
+    });
+  }, [user]);
 
   useEffect(() => {
     axios
