@@ -4,3 +4,4 @@ export const colors = {
   bgcards: " #302F3D",
   bgtechs: "#CB92B1",
 };
+

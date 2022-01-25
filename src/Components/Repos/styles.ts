@@ -98,10 +98,11 @@ export const RepoTitle = styled.span`
 
 export const Body = styled.div`
   //background-color: rgba(0, 0, 0, 0.2);
-  padding: 0px 32px;
-  margin-top: 16px;
-  height: 40%;
+  padding: 8px 32px;
+  margin-top: 8px;
+  height: 80%;
   align-items: center;
+  overflow-y: auto;
 `;
 
 export const BodyText = styled.span`
@@ -114,7 +115,6 @@ export const BodyText = styled.span`
 
 export const Foot = styled.div`
   padding: 0px 32px;
-  margin-top: 16px;
   height: 40%;
   align-items: center;
   display: flex;
