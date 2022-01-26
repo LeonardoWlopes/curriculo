@@ -30,7 +30,7 @@ export const UserProvider: React.FC = ({ children }) => {
 
   useEffect(() => (
     GitHubApi())
-  , [,user]);
+  , []);
 
   return (
     <UserContext.Provider
