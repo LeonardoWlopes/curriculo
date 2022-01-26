@@ -25,8 +25,8 @@ export const LeftContainer = styled.div<props>`
 export const RightContainer = styled.div<props>`
   //background-color: blue;
   min-height: 100%;
-  max-width: ${(props) => (props.isColumn ? "100%" : "75%")};
-  //margin: auto;
+  width: ${(props) => (props.isColumn ? "auto" : "75%")};
+ 
   display: flex;
   flex-direction: column;
   padding: ${(props) => (props.isColumn ? "0px" : "58px")} 16px;

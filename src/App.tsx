@@ -1,5 +1,5 @@
-import "./Styles/App.css";
-import './Styles/ScrollBar.css'
+import "./Styles/App.scss";
+import "./Styles/ScrollBar.scss";
 import { UserProvider } from "./Context/UserContext";
 import AppRoutes from "./Routes/App.routes";
 

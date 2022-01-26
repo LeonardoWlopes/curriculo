@@ -59,11 +59,11 @@ export default function Repos() {
         onClick={() => {
           window.open(html_url, "_blank");
         }}
-        className="RepoCard notranslate"
+        className="RepoCard notranslate repoScrollBar"
       >
         <S.Head>
           <S.Icon src={Folder} />
-          <S.RepoTitle >{name}</S.RepoTitle>
+          <S.RepoTitle>{name}</S.RepoTitle>
           {!!homepage && (
             <S.Rocket
               src={Rocket}
@@ -116,20 +116,21 @@ export default function Repos() {
         </S.Link>
       </S.TitleContainer>
       <S.ReposContainer open={open}>
-        {OrderedRepos?.map((repo) => (
-          <RepoCard
-            key={repo.id}
-            id={repo.id}
-            name={repo.name}
-            description={repo.description}
-            stargazers_count={repo.stargazers_count}
-            forks={repo.forks}
-            language={repo.language}
-            html_url={repo.html_url}
-            updated_at={repo.updated_at}
-            homepage={repo.homepage}
-          />
-        ))}
+        {!!OrderedRepos &&
+          OrderedRepos.map((repo) => (
+            <RepoCard
+              key={repo.id}
+              id={repo.id}
+              name={repo.name}
+              description={repo.description}
+              stargazers_count={repo.stargazers_count}
+              forks={repo.forks}
+              language={repo.language}
+              html_url={repo.html_url}
+              updated_at={repo.updated_at}
+              homepage={repo.homepage}
+            />
+          ))}
       </S.ReposContainer>
     </S.Container>
   );

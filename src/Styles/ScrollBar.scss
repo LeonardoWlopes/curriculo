@@ -1,0 +1,32 @@
+* {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #837e9f;
+    border-radius: 30px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777294;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+  }
+}
+
+.repoScrollBar {
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #777294;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}

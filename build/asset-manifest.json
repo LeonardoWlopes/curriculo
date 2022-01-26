@@ -1,29 +1,22 @@
 {
   "files": {
-    "main.css": "/curriculo/static/css/main.2c60c019.chunk.css",
-    "main.js": "/curriculo/static/js/main.14ace3da.chunk.js",
-    "main.js.map": "/curriculo/static/js/main.14ace3da.chunk.js.map",
-    "runtime-main.js": "/curriculo/static/js/runtime-main.26644dd4.js",
-    "runtime-main.js.map": "/curriculo/static/js/runtime-main.26644dd4.js.map",
-    "static/js/2.22223fab.chunk.js": "/curriculo/static/js/2.22223fab.chunk.js",
-    "static/js/2.22223fab.chunk.js.map": "/curriculo/static/js/2.22223fab.chunk.js.map",
+    "main.css": "/curriculo/static/css/main.7ca38988.css",
+    "main.js": "/curriculo/static/js/main.b322fa12.js",
+    "static/media/rocket.png": "/curriculo/static/media/rocket.e146145c2293a15efc43.png",
     "index.html": "/curriculo/index.html",
-    "static/css/main.2c60c019.chunk.css.map": "/curriculo/static/css/main.2c60c019.chunk.css.map",
-    "static/js/2.22223fab.chunk.js.LICENSE.txt": "/curriculo/static/js/2.22223fab.chunk.js.LICENSE.txt",
-    "static/media/folder.131f06eb.svg": "/curriculo/static/media/folder.131f06eb.svg",
-    "static/media/git-branch.120adf52.svg": "/curriculo/static/media/git-branch.120adf52.svg",
-    "static/media/github.e7ab8675.svg": "/curriculo/static/media/github.e7ab8675.svg",
-    "static/media/instagram.7d973914.svg": "/curriculo/static/media/instagram.7d973914.svg",
-    "static/media/linkedin.9e52cf32.svg": "/curriculo/static/media/linkedin.9e52cf32.svg",
-    "static/media/mail.eee1baa7.svg": "/curriculo/static/media/mail.eee1baa7.svg",
-    "static/media/map-pin.8c41fcd3.svg": "/curriculo/static/media/map-pin.8c41fcd3.svg",
-    "static/media/rocket.e146145c.png": "/curriculo/static/media/rocket.e146145c.png",
-    "static/media/star.8070f233.svg": "/curriculo/static/media/star.8070f233.svg"
+    "static/media/github.svg": "/curriculo/static/media/github.e7ab8675a2cbadea548cafe724065b9e.svg",
+    "static/media/instagram.svg": "/curriculo/static/media/instagram.7d97391465d60f2909c444d267ea80ff.svg",
+    "static/media/linkedin.svg": "/curriculo/static/media/linkedin.9e52cf326e0bbf3cd9a3378906c0d35c.svg",
+    "static/media/git-branch.svg": "/curriculo/static/media/git-branch.120adf52f8c4855276742c1d33c5b94f.svg",
+    "static/media/mail.svg": "/curriculo/static/media/mail.eee1baa73917a6ad8cc5ab655510875a.svg",
+    "static/media/star.svg": "/curriculo/static/media/star.8070f2335a60a0172b4cde8fddb5b020.svg",
+    "static/media/map-pin.svg": "/curriculo/static/media/map-pin.8c41fcd32a64210260619a622335959e.svg",
+    "static/media/folder.svg": "/curriculo/static/media/folder.131f06eb968394918a3f4b04151f5a03.svg",
+    "main.7ca38988.css.map": "/curriculo/static/css/main.7ca38988.css.map",
+    "main.b322fa12.js.map": "/curriculo/static/js/main.b322fa12.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.26644dd4.js",
-    "static/js/2.22223fab.chunk.js",
-    "static/css/main.2c60c019.chunk.css",
-    "static/js/main.14ace3da.chunk.js"
+    "static/css/main.7ca38988.css",
+    "static/js/main.b322fa12.js"
   ]
 }
