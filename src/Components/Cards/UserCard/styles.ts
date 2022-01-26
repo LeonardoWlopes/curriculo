@@ -26,7 +26,7 @@ export const UserNameContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+  justify-content: center;
 `;
 
 export const UserName = styled.input`
@@ -39,6 +39,7 @@ export const UserName = styled.input`
   text-align: center;
   background-color: transparent;
   width: 100%;
+  border: none;
 `;
 
 export const UserBio = styled.span`

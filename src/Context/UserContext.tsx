@@ -13,7 +13,7 @@ interface IUserContext {
   loged: boolean;
   setUserLogin: Dispatch<SetStateAction<any>>;
   userLogin: string;
-  setLockSearch: Dispatch<SetStateAction<boolean>>;
+  GitHubApi: () => void;
 }
 
 const UserContext = createContext<IUserContext>({} as IUserContext);
@@ -21,32 +21,26 @@ const UserContext = createContext<IUserContext>({} as IUserContext);
 export const UserProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<IUser>({} as IUser);
   const [userLogin, setUserLogin] = useState("leonardoWlopes");
-  const [lockSearch, setLockSearch] = useState(false);
 
-  useEffect(() => {
-    !userLogin && setUserLogin("leonardoWlopes");
-  }, [userLogin]);
-
-  const GitHubApi = (): Promise<IUser> =>
+  const GitHubApi = () =>
     axios
       .get(`https://api.github.com/users/${userLogin}`)
       .then((res) => {
         console.log(res.data);
-        return res.data;
+        setUser(res.data);
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("User does not exist");
+        setUserLogin("leonardoWlopes");
       });
 
   useEffect(() => {
-    (async () => {
-      setUser(await GitHubApi());
-    })();
-  }, [, userLogin]);
+    GitHubApi();
+  }, []);
 
   return (
     <UserContext.Provider
-      value={{ loged: !user, user, setUserLogin, userLogin, setLockSearch }}
+      value={{ loged: !user, user, setUserLogin, userLogin, GitHubApi }}
     >
       {children}
     </UserContext.Provider>

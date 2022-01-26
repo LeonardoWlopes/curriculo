@@ -22,6 +22,7 @@ interface ICard {
 
 export default function Repos() {
   const [repos, setRepos] = useState<Array<ICard>>();
+  const [orderedRepos, setOrderedRepos] = useState<Array<ICard>>();
   const [colors, setColors] = useState<any>();
   const [open, setOpen] = useState(false);
 
@@ -30,7 +31,14 @@ export default function Repos() {
   useEffect(() => {
     axios.get(`${user?.repos_url}`).then((res) => {
       console.log(res.data);
-      setRepos(res.data);
+
+      const OrderedRepos = res.data?.sort(function (
+        a: { updated_at: any },
+        b: { updated_at: string }
+      ) {
+        return b.updated_at.localeCompare(a.updated_at);
+      });
+      setOrderedRepos(OrderedRepos);
     });
   }, [user]);
 
@@ -101,10 +109,6 @@ export default function Repos() {
     );
   }
 
-  const OrderedRepos = repos?.sort(function (a, b) {
-    return b.updated_at.localeCompare(a.updated_at);
-  });
-
   return (
     <S.Container>
       <S.TitleContainer onClick={() => setOpen(!open)} className="RepoCard">
@@ -117,8 +121,8 @@ export default function Repos() {
         </S.Link>
       </S.TitleContainer>
       <S.ReposContainer open={open}>
-        {!!OrderedRepos &&
-          OrderedRepos.map((repo) => (
+        {!!orderedRepos &&
+          orderedRepos.map((repo) => (
             <RepoCard
               key={repo.id}
               id={repo.id}
