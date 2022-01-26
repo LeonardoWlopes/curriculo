@@ -28,8 +28,8 @@ export const Linha = styled.div`
 `;
 
 export const Icone = styled(SVG)`
-  width: 25px;
-  height: 25px;
+  min-width: 25px;
+  min-height: 25px;
   color: ${colors.textcolor};
   margin-right: 8px;
 `;
@@ -49,4 +49,5 @@ export const Link = styled.a`
   line-height: 16px;
   color: ${colors.textcolor};
   text-decoration: none;
+  text-align: center;
 `;
