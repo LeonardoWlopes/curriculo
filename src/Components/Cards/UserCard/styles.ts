@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 320px;
-  min-width: 165px;
+  min-width: 207px;
   height: 290px;
   margin: 16px 0px;
 
@@ -22,7 +22,14 @@ export const Foto = styled.img`
   border-radius: 50%;
 `;
 
-export const UserName = styled.span`
+export const UserNameContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const UserName = styled.input`
   font-style: normal;
   font-weight: bold;
   font-size: 23px;
@@ -30,6 +37,9 @@ export const UserName = styled.span`
   color: ${colors.textcolor};
   margin: auto;
   text-align: center;
+  background-color: transparent;
+  width: 100%;
+  border: none;
 `;
 
 export const UserBio = styled.span`

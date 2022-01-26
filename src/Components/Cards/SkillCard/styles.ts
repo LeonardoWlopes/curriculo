@@ -3,17 +3,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin: 16px 0px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  flex-direction: column;
   width: 100%;
-  max-width: 320px;
-  min-width: 165px;
+  max-width: 330px;
+  min-width: 222px;
   min-height: 200px;
   background: ${colors.bgcards};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  padding: 16px;
+  padding: 8px;
 `;
 
 export const Title = styled.span`

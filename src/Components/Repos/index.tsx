@@ -1,11 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as S from "./styles";
 
 import Folder from "../../Assets/folder.svg";
 import Star from "../../Assets/star.svg";
 import Branch from "../../Assets/git-branch.svg";
 import Rocket from "../../Assets/rocket.png";
+import UserContext from "../../Context/UserContext";
 
 interface ICard {
   id: number;
@@ -20,18 +21,25 @@ interface ICard {
 }
 
 export default function Repos() {
-  const [repos, setRepos] = useState<Array<ICard>>();
+  const [orderedRepos, setOrderedRepos] = useState<Array<ICard>>();
   const [colors, setColors] = useState<any>();
   const [open, setOpen] = useState(false);
 
+  const { user } = useContext(UserContext);
+
   useEffect(() => {
-    axios
-      .get("https://api.github.com/users/LeonardoWlopes/repos")
-      .then((res) => {
-        console.log(res.data);
-        setRepos(res.data);
+    axios.get(`${user?.repos_url}`).then((res) => {
+      console.log(res.data);
+
+      const OrderedRepos = res.data?.sort(function (
+        a: { updated_at: any },
+        b: { updated_at: string }
+      ) {
+        return b.updated_at.localeCompare(a.updated_at);
       });
-  }, []);
+      setOrderedRepos(OrderedRepos);
+    });
+  }, [user]);
 
   useEffect(() => {
     axios
@@ -100,10 +108,6 @@ export default function Repos() {
     );
   }
 
-  const OrderedRepos = repos?.sort(function (a, b) {
-    return b.updated_at.localeCompare(a.updated_at);
-  });
-
   return (
     <S.Container>
       <S.TitleContainer onClick={() => setOpen(!open)} className="RepoCard">
@@ -116,8 +120,8 @@ export default function Repos() {
         </S.Link>
       </S.TitleContainer>
       <S.ReposContainer open={open}>
-        {!!OrderedRepos &&
-          OrderedRepos.map((repo) => (
+        {!!orderedRepos &&
+          orderedRepos.map((repo) => (
             <RepoCard
               key={repo.id}
               id={repo.id}
