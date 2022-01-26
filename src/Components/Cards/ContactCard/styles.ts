@@ -8,12 +8,15 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 320px;
-  min-width: 165px;
-  min-height: 200px;
+  min-width: 207px;
+  //min-height: 200px;
   background: ${colors.bgcards};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Linha = styled.div`
@@ -47,4 +50,3 @@ export const Link = styled.a`
   color: ${colors.textcolor};
   text-decoration: none;
 `;
-

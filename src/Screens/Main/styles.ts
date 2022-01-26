@@ -5,9 +5,7 @@ interface props {
 }
 
 export const Container = styled.div<props>`
-  width: 100%;
   min-height: 100vh;
-  height: 100%;
   background-color: #22212c;
 
   flex-direction: ${(props) => (props.isColumn ? "column" : "row")};
@@ -25,7 +23,7 @@ export const LeftContainer = styled.div<props>`
 export const RightContainer = styled.div<props>`
   //background-color: blue;
   min-height: 100%;
-  width: ${(props) => (props.isColumn ? "auto" : "75%")};
+  width: auto;
   //margin: auto;
   display: flex;
   flex-direction: column;

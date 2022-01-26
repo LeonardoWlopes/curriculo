@@ -9,7 +9,13 @@ export default function UserCard() {
 
   return (
     <S.Container>
-      <S.Foto src={user?.avatar_url} />
+      <S.Foto
+        src={
+          !!user
+            ? user.avatar_url
+            : "https://icones.pro/wp-content/uploads/2021/06/icone-github-noir.png"
+        }
+      />
 
       <S.InfosContainer>
         <S.UserNameContainer>
