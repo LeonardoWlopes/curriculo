@@ -113,7 +113,7 @@ export default function Repos() {
       <S.TitleContainer onClick={() => setOpen(!open)} className="RepoCard">
         <S.Title>Meus Projetos</S.Title>
         <S.Link
-          href="https://github.com/LeonardoWlopes?tab=repositories"
+          href={`https://github.com/${user?.login}?tab=repositories`}
           target="_blank"
         >
           Ver todos
