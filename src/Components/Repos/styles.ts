@@ -153,7 +153,8 @@ export const Rocket = styled.img`
   margin-left: auto;
   display: block;
   transition: 0.2s;
+  z-index: 5;
   &&:hover {
-    width: 30px;
+    width: 27px;
   }
 `;

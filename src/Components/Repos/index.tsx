@@ -1,12 +1,11 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as S from "./styles";
 
 import Folder from "../../Assets/folder.svg";
 import Star from "../../Assets/star.svg";
 import Branch from "../../Assets/git-branch.svg";
 import Rocket from "../../Assets/rocket.png";
-import UserContext from "../../Context/UserContext";
 
 interface ICard {
   id: number;
